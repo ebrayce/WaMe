@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WaMe</string>
+    <string name="send_message_now">Send Message Now</string>
 </resources>
