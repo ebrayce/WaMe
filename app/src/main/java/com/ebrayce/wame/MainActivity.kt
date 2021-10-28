@@ -18,10 +18,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         txtPhoneNumber = binding.txtPhoneNumber
+
+        binding.fabSend.setOnClickListener {
+            sendMessage()
+        }
         setContentView(view)
+
     }
 
-    fun sendMessage(view: View) {
+    fun sendMessage() {
         val msgIntent = Intent(Intent.ACTION_VIEW)
         msgIntent.data =
             Uri.parse(getString(R.string.whatsAppApiPrefix) + txtPhoneNumber.text.toString())
