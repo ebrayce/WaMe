@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">WaMe</string>
     <string name="send_message_now">Send Message Now</string>
+    <string name="sndMessage">Send Message With</string>
+    <string name="whatsAppApiPrefix">https://api.whatsapp.com/send?phone=</string>
+    <string name="txtHint">Number with Country Code +233...</string>
 </resources>
