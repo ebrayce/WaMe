@@ -5,4 +5,6 @@
     <string name="whatsAppApiPrefix">https://api.whatsapp.com/send?phone=</string>
     <string name="txtHint">Number with Country Code +233...</string>
     <string name="todo">TODO</string>
+    <string name="about_message">With this app you can quickly send WhatsApp message to someone before saving the person\'s number. Just enter the number with country code.</string>
+    <string name="about_text">About</string>
 </resources>

@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.ebrayce.wame.databinding.ActivityMainBinding
 
@@ -22,11 +23,14 @@ class MainActivity : AppCompatActivity() {
         binding.fabSend.setOnClickListener {
             sendMessage()
         }
+        binding.imageView.setOnClickListener{
+            showAbout()
+        }
         setContentView(view)
 
     }
 
-    fun sendMessage() {
+    private fun sendMessage() {
         val msgIntent = Intent(Intent.ACTION_VIEW)
         msgIntent.data =
             Uri.parse(getString(R.string.whatsAppApiPrefix) + txtPhoneNumber.text.toString())
@@ -37,6 +41,12 @@ class MainActivity : AppCompatActivity() {
         } catch (e: Error) {
             startActivity(msgIntent)
         }
+    }
+
+    private fun showAbout(){
+        val aboutDialog = AlertDialog.Builder(this)
+        aboutDialog.setTitle(getString(R.string.about_text))
+            .setMessage(getString(R.string.about_message)).create().show()
     }
 
 }
